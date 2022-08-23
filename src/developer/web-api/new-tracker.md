@@ -171,7 +171,6 @@ In the API, the significant difference is that all events are either connected t
 | enrollment | A reference to the enrollment which owns the event. ***Not applicable for `EVENT PROGRAM`*** | Yes | Yes | String:Uid | ABCDEF12345 |
 | program | Only for reading data. The type of program the enrollment which owns the event has. | No | Yes | String:Uid | ABCDEF12345 |
 | trackedEntity | Only for reading data. The tracked entity which owns the event. ***Not applicable for `EVENT PROGRAM`*** | No | No | String:Uid | ABCDEF12345 |
-| status | Status of the event. ACTIVE if not supplied. | No | No | Enum | ACTIVE, COMPLETED, VISITED, SCHEDULE, OVERDUE, SKIPPED |
 | enrollmentStatus | Only for reading data. The status of the enrollment which owns the event. ***Not applicable for `EVENT PROGRAM`*** | No | No | Enum | ACTIVE, COMPLETED, CANCELLED |
 | orgUnit | The organisation unit where the user registered the event. | Yes | No | String:Uid | ABCDEF12345 |
 | orgUnitName | Only for reading data. The name of the organisation unit where the user registered the event. | No | No | String:Any | Sierra Leone |
@@ -1553,7 +1552,6 @@ Returns a list of events based on the provided filters.
 |`trackedEntityInstance`|`String`|`uid`| Identifier of tracked entity instance|
 |`orgUnit`|`String`|`uid`| Identifier of organisation unit|
 |`ouMode` see [ouModes](#Request-parameters-for-Organisational-Unit-selection-mode)|`String`| `SELECTED`&#124;`CHILDREN`&#124;`DESCENDANTS`|  Org unit selection mode| 
-|`status`|`String`|`COMPLETED`&#124;`VISITED`&#124;`SCHEDULED`&#124;`OVERDUE`&#124;`SKIPPED` | Status of event|
 |`occurredAfter`|`DateTime`|[ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) | Filter for events which occurred after this date.|
 |`occurredBefore`|`DateTime`| [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)| Filter for events which occurred up until this date.|
 |`scheduledAfter`|`DateTime`|[ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) | Filter for events which were scheduled after this date.|
